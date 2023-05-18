@@ -20,11 +20,14 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BatchConfig {
 
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     private JobBuilderFactory jobBuilderFactory;
 
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     private StepBuilderFactory steBuilderFactory;
+
     @Bean
     public Job getHelloJob(){
 
